@@ -30,3 +30,4 @@ ENV/
 *.swo
 *.pyc
 .DS_Store
+.pypi-token

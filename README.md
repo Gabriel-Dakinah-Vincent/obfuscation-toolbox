@@ -739,3 +739,49 @@ This tool is for educational and legitimate purposes only. Users are responsible
 - **Parameters**: None
 - **Use Case**: Hide numeric constants
 - **Example**: `obfuscate('arithmetic', "x = 5")`
+
+---
+
+## 🔄 Deobfuscation Capabilities
+
+### Fully Reversible ✅
+
+**These techniques perfectly restore the original code:**
+
+1. **String** - `deobfuscate('string', obfuscated, level=2)`
+2. **Hex** - `deobfuscate('hex', obfuscated)`
+3. **XOR** - `deobfuscate('xor', obfuscated, key=42)` (requires same key)
+4. **Control Flow** - `deobfuscate('control_flow', obfuscated, complexity=2)`
+5. **Comment** - `deobfuscate('comment', obfuscated, density=2)`
+6. **Dead Code** - `deobfuscate('dead_code', obfuscated, intensity=3)`
+7. **Opaque Predicates** - `deobfuscate('opaque_predicate', obfuscated, complexity=2)`
+8. **Minify** - `deobfuscate('minify', obfuscated)` (restores structure)
+
+### Partially Reversible ⚠️
+
+**These require the same obfuscator instance (not cross-session):**
+
+9. **Variable** - Requires same instance with mapping
+10. **Function Rename** - Requires same instance with mapping
+11. **Class Rename** - Requires same instance with mapping
+
+```python
+# Same-session deobfuscation example
+from obfuscation_toolit.techniques.variable import VariableObfuscator
+
+obfuscator = VariableObfuscator(length=10)
+obfuscated = obfuscator.obfuscate("x = 5")
+deobfuscated = obfuscator.deobfuscate(obfuscated)  # Works!
+```
+
+### Not Reversible ❌
+
+12. **Arithmetic** - Intentionally irreversible (numbers become expressions)
+
+```python
+# Arithmetic is one-way
+code = "x = 5"
+obfuscated = obfuscate('arithmetic', code)
+# Result: "x = (9 - 4)" or similar
+# Cannot reverse to original "5"
+```

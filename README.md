@@ -1,9 +1,9 @@
 # Obfuscation Toolbox
 
-![PyPI](https://img.shields.io/pypi/v/obfuscation-toolbox)
-![Python](https://img.shields.io/pypi/pyversions/obfuscation-toolbox)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status](https://img.shields.io/pypi/status/obfuscation-toolbox)
+[![PyPI](https://img.shields.io/pypi/v/obfuscation-toolbox)](https://pypi.org/project/obfuscation-toolbox/)
+[![Python](https://img.shields.io/pypi/pyversions/obfuscation-toolbox)](https://pypi.org/project/obfuscation-toolbox/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/pypi/status/obfuscation-toolbox)](https://pypi.org/project/obfuscation-toolbox/)
 
 Professional Python code obfuscation library with 12+ techniques. Protect your source code from reverse engineering with industry-standard obfuscation methods.
 

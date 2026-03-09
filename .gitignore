@@ -31,3 +31,4 @@ ENV/
 *.pyc
 .DS_Store
 .pypi-token
+.pypi-token-prod
